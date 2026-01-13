@@ -1,4 +1,35 @@
+* {
+    color: #344d36;
+}
+
 body {
     background-color: #929fdc;
     font-family: 'Inter', sans-serif;
+}
+
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.nav-title {
+    margin-right: auto;
+}
+
+.nav-list li {
+    list-style: none;
+
+
+}
+
+.nav-list li:not(.nav-title) {
+    margin: auto 1.5rem;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .75rem;
 }
