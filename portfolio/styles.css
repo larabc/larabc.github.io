@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #929fdc;
+    background-color: #d7ceb3;
     font-family: 'Inter', sans-serif;
 }
 
@@ -21,11 +21,10 @@ body {
 .nav-list li {
     list-style: none;
 
-
 }
 
 .nav-list li:not(.nav-title) {
-    margin: auto 1.5rem;
+    margin: auto .5rem;
 }
 
 .nav-list li a {
