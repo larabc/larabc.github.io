@@ -149,7 +149,7 @@ section {
 /* images styles */
 .image-container {
 
-    height: 70vh;
+    height: 40vh;
     display: flex;
     justify-content: center;
 
@@ -166,8 +166,19 @@ section {
 
 #welcome {
     padding: 0 12rem;
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
+
+.welcome-content {
+    width: 50%;
+
+    text-align: left;
+
+}
+
 
 .subtitle {
     font-family: 'Averia Serif Libre', serif;
