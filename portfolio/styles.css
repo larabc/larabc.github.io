@@ -10,6 +10,14 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+
+
 /* Navbar styles */
 
 nav {
@@ -52,4 +60,17 @@ section {
     min-height: 100dvh;
     border: 1px solid black;
     scroll-margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 4rem;
+}
+
+#welcome {
+    padding: 0 12rem;
+}
+
+.subtitle {
+    font-family: 'Averia Serif Libre', serif;
+    font-size: 1.2rem;
 }
