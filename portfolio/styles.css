@@ -1,5 +1,8 @@
 * {
     color: #344d36;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -7,10 +10,18 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #d7ceb3;
+    z-index: 100;
+    padding: 1rem;
+}
 
 .nav-list {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
 }
 
@@ -31,4 +42,10 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: .75rem;
+}
+
+section {
+    min-height: 100dvh;
+    border: 1px solid black;
+    scroll-margin-top: 4rem;
 }
