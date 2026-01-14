@@ -16,7 +16,15 @@ h1 {
     margin-bottom: 1rem;
 }
 
+h2 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+}
 
+p {
+    line-height: 1.5;
+}
 
 /* Navbar styles */
 
@@ -61,16 +69,48 @@ section {
     border: 1px solid black;
     scroll-margin-top: 4rem;
     display: flex;
-    flex-direction: column;
+
     justify-content: center;
     margin: 0 4rem;
 }
 
+/* Welcome section styles */
+
 #welcome {
     padding: 0 12rem;
+    flex-direction: column;
 }
 
 .subtitle {
     font-family: 'Averia Serif Libre', serif;
     font-size: 1.2rem;
+}
+
+/* About section styles */
+#about {
+    align-items: center;
+    gap: 2rem;
+}
+
+#about img {
+    max-width: 400px;
+    max-height: 50vh;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.about-content p {
+    margin-bottom: 1rem;
+}
+
+.hobbies-list {
+    list-style-type: disc;
+    margin-left: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.hobbies-list li {
+    margin-bottom: 0.5rem;
 }
