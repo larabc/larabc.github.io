@@ -10,8 +10,12 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 h1 {
-    font-size: 3.5rem;
+    font-size: 7rem;
     font-weight: 400;
     margin-bottom: 1rem;
 }
@@ -31,6 +35,7 @@ h3 {
 p {
     line-height: 1.5;
     font-weight: 300;
+
 }
 
 /* Navbar styles */
@@ -40,7 +45,7 @@ nav {
     top: 0;
     background-color: #EEE1D5;
     z-index: 100;
-    padding: 1rem;
+    padding: 2rem 6rem;
 }
 
 .nav-list {
@@ -50,34 +55,44 @@ nav {
 
 }
 
-.nav-title {
-    margin-right: auto;
-}
 
 .nav-list li {
     list-style: none;
 
 }
 
-.nav-list li:not(.nav-title) {
-    margin: auto .5rem;
+.nav-list li:not(:first-child) {
+    margin: auto .8rem;
+}
+
+.nav-list li:first-child {
+    margin-right: auto;
 }
 
 .nav-list li a {
     text-decoration: none;
-    font-weight: 600;
-    font-size: .75rem;
+    font-size: 0.9rem;
+    text-transform: lowercase;
+
+    &:hover {
+        color: #D97557;
+        text-decoration: underline;
+    }
+}
+
+#nav-title {
+    font-weight: 700;
 }
 
 /* Section styles */
 
 section {
-    min-height: 100dvh;
+    min-height: 90dvh;
     scroll-margin-top: 4rem;
     display: flex;
 
     justify-content: center;
-    margin: 0 4rem;
+    margin: 0 16rem;
 }
 
 /* Welcome section styles */
@@ -89,7 +104,7 @@ section {
 
 .subtitle {
     font-family: 'Averia Serif Libre', serif;
-    font-size: 1.2rem;
+    font-size: 2rem;
 }
 
 /* About section styles */
@@ -199,13 +214,9 @@ section {
 .company-link {
     font-size: .8rem;
     color: #D97557;
-    text-decoration: none;
+
     display: inline-block;
     margin: 0.5rem 0 1rem 0;
-
-    &:hover {
-        text-decoration: underline;
-    }
 }
 
 .skills-table {
@@ -249,10 +260,6 @@ footer a {
     text-decoration: none;
     font-weight: 300;
     font-size: 0.75rem;
-
-    &:hover {
-        text-decoration: underline;
-    }
 }
 
 footer a,
