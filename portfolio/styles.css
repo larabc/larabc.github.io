@@ -231,9 +231,7 @@ section {
     border-radius: 8px;
     overflow: hidden;
     width: 45%;
-    /* cambia de 300px a 45% */
     max-width: 450px;
-    /* límite máximo */
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     transition: transform 0.3s ease-in-out;
@@ -247,8 +245,7 @@ section {
 
 .project-card img {
     width: 100%;
-    height: 250px;
-    /* aumentar de 200px a 250px */
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     display: block;
 }
