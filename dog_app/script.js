@@ -1,5 +1,7 @@
 const breedsUrl = "https://dog.ceo/api/breeds/list/all";
 const select = document.getElementById("selectBreed");
+const loader = document.getElementById("loader");
+const dogImage = document.getElementById("dog-image");
 
 document.addEventListener('DOMContentLoaded', () => {
     loadBreeds();
@@ -60,6 +62,7 @@ select.addEventListener('change', (e) => {
     showImage(selectedBreed);
 });
 
+
 async function loadBreeds() {
     try {
         const response = await fetch(breedsUrl);
@@ -85,24 +88,47 @@ async function showImage(selectedBreed) {
     try {
         const response = await fetch(breedURL);
         const data = await response.json();
-        document.getElementById('dog-image').src = data.message;
-        document.getElementById('dog-image').alt = selectedBreed;
+
+
+        dogImage.src = data.message;
+        dogImage.alt = selectedBreed;
+
+        dogImage.onload = () => {
+            hideLoader();
+        }
+
     } catch (error) {
         console.error("There has been an error:", error);
+        hideLoader();
     }
 }
 
 async function showRandomImage() {
+    showLoader();
+
     const randomURL = 'https://dog.ceo/api/breeds/image/random';
 
     try {
         const response = await fetch(randomURL);
         const data = await response.json();
-        document.getElementById('dog-image').src = data.message;
-        document.getElementById('dog-image').alt = 'Random Dog';
+
+        dogImage.src = data.message;
+        dogImage.alt = 'Random Dog';
+        dogImage.onload = () => {
+            hideLoader();
+        }
+
     } catch (error) {
         console.error("There has been an error:", error);
+        hideLoader();
     }
 
 }
 
+function showLoader() {
+    loader.style.display = 'inline-block';
+}
+
+function hideLoader() {
+    loader.style.display = 'none';
+}
