@@ -104,6 +104,7 @@ async function showImage(selectedBreed) {
 }
 
 async function showRandomImage() {
+
     showLoader();
 
     const randomURL = 'https://dog.ceo/api/breeds/image/random';
@@ -126,9 +127,11 @@ async function showRandomImage() {
 }
 
 function showLoader() {
+    dogImage.style.display = 'none';
     loader.style.display = 'inline-block';
 }
 
 function hideLoader() {
     loader.style.display = 'none';
+    dogImage.style.display = '';
 }
