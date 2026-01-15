@@ -37,6 +37,7 @@ function showImage(selectedBreed) {
         .then((response) => response.json())
         .then((data) => {
             document.getElementById('dog-image').src = data.message;
+            document.getElementById('dog-image').alt = selectedBreed;
         })
         .catch((error) => console.error("There has been an error:", error));
 
@@ -49,6 +50,7 @@ function showRandomImage() {
         .then((response) => response.json())
         .then((data) => {
             document.getElementById('dog-image').src = data.message;
+            document.getElementById('dog-image').alt = 'Random Dog';
         })
         .then((error) => console.error("There has been an error:", error));
 }
