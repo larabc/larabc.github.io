@@ -8,3 +8,62 @@
     animation: spin 3s ease-in-out infinite;
 
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+nav {
+    background-color: #00BD71;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    width: 500px;
+    min-height: 250px;
+    margin: 4rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    width: 100%;
+    border-radius: 24px;
+}
+
+#loader {
+    display: none;
+}
+
+
+select {
+    font-size: 1rem;
+    appearance: none;
+    border: 0;
+    outline: 0;
+    width: 20rem;
+    padding: 1em;
+    border-radius: 0.25em;
+    box-shadow: 0 0 1em 0 rgba(0, 0, 0, 0.129);
+    background-color: #0b905b;
+    color: #fff;
+    cursor: pointer;
+
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 24px;
+}
