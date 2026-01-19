@@ -84,7 +84,7 @@ async function loadBreeds() {
 
 async function showImage(breed = null) {
     showLoader();
-
+    hideBreedName();
     const url = breed
         ? `https://dog.ceo/api/breed/${breed}/images/random`
         : 'https://dog.ceo/api/breeds/image/random';
@@ -95,8 +95,12 @@ async function showImage(breed = null) {
 
         dogImage.src = data.message;
         dogImage.alt = breed || 'Random Dog';
+
         dogImage.onload = () => {
             hideLoader();
+            if (breed) {
+                showBreedName(breed);
+            }
         }
 
     } catch (error) {
@@ -113,4 +117,14 @@ function showLoader() {
 function hideLoader() {
     loader.style.display = 'none';
     dogImage.style.display = '';
+}
+
+function hideBreedName() {
+    document.getElementById('breed-name').textContent = '';
+}
+
+function showBreedName(breed) {
+    document.getElementById('breed-name').textContent = breed
+        ? breed.charAt(0).toUpperCase() + breed.slice(1)
+        : '';
 }

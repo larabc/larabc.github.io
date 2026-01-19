@@ -38,6 +38,29 @@ main {
     align-items: center;
 }
 
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+#breed-name {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+
+    &:empty {
+        display: none;
+    }
+}
+
+
+
 img {
     width: 100%;
     border-radius: 24px;
@@ -88,5 +111,12 @@ select {
     main {
         width: 90%;
         margin: 2rem auto;
+    }
+
+    #loader {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 }
