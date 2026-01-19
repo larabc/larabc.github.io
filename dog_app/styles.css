@@ -102,6 +102,14 @@ select {
     padding-right: 24px;
 }
 
+#loader {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Media queries */
 
 @media (max-width: 600px) {
@@ -109,6 +117,10 @@ select {
         flex-direction: column;
         gap: 1rem;
         padding: 1rem;
+    }
+
+    nav div {
+        text-align: center;
     }
 
     h1 {
@@ -122,12 +134,5 @@ select {
     main {
         width: 90%;
         margin: 2rem auto;
-    }
-
-    #loader {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
     }
 }
