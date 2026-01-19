@@ -5,7 +5,7 @@ const dogImage = document.getElementById("dog-image");
 
 document.addEventListener('DOMContentLoaded', () => {
     loadBreeds();
-    showRandomImage();
+    showImage();
 });
 
 
@@ -82,39 +82,19 @@ async function loadBreeds() {
 }
 
 
-async function showImage(selectedBreed) {
-    const breedURL = `https://dog.ceo/api/breed/${selectedBreed}/images/random`;
-
-    try {
-        const response = await fetch(breedURL);
-        const data = await response.json();
-
-
-        dogImage.src = data.message;
-        dogImage.alt = selectedBreed;
-
-        dogImage.onload = () => {
-            hideLoader();
-        }
-
-    } catch (error) {
-        console.error("There has been an error:", error);
-        hideLoader();
-    }
-}
-
-async function showRandomImage() {
-
+async function showImage(breed = null) {
     showLoader();
 
-    const randomURL = 'https://dog.ceo/api/breeds/image/random';
+    const url = breed
+        ? `https://dog.ceo/api/breed/${breed}/images/random`
+        : 'https://dog.ceo/api/breeds/image/random';
 
     try {
-        const response = await fetch(randomURL);
+        const response = await fetch(url);
         const data = await response.json();
 
         dogImage.src = data.message;
-        dogImage.alt = 'Random Dog';
+        dogImage.alt = breed || 'Random Dog';
         dogImage.onload = () => {
             hideLoader();
         }
@@ -123,7 +103,6 @@ async function showRandomImage() {
         console.error("There has been an error:", error);
         hideLoader();
     }
-
 }
 
 function showLoader() {
