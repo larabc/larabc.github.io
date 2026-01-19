@@ -72,7 +72,7 @@ async function loadBreeds() {
         breeds.forEach((breed) => {
             const option = document.createElement('option');
             option.value = breed;
-            option.textContent = breed;
+            option.textContent = breed.charAt(0).toUpperCase() + breed.slice(1);
             select.appendChild(option);
         });
 
